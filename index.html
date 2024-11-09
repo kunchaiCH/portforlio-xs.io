@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Kunchai Noichalee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* ตั้งค่าเบื้องต้น */
+        body {
+            font-family: 'Kanit', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #4e73df, #2c3e50); /* Gradient Background */
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* ทำให้พื้นหลังมีภาพเบลอ */
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://source.unsplash.com/1600x900/?technology,computer'); /* ภาพพื้นหลัง */
+            background-size: cover;
+            filter: blur(10px);
+            z-index: -1; /* ทำให้ภาพเบลออยู่ด้านหลังเนื้อหาทั้งหมด */
+        }
+
+        /* Header */
+        header {
+            padding: 40px 0;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Main container */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Profile Section */
+        .profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 60px 0;
+            animation: fadeIn 2s ease-in-out;
+            background: rgba(0, 0, 0, 0.6); /* ทำให้พื้นหลังโปร่งใส */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .profile img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .profile img:hover {
+            transform: scale(1.1);
+        }
+
+        .profile-info {
+            max-width: 600px;
+            text-align: left;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .profile-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .profile-info p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        /* Skill section */
+        .skills {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px 0;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills li {
+            font-size: 1.2rem;
+            margin: 15px 0;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Education Section */
+        .education {
+            margin: 40px 0;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .education p {
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            margin-top: 40px;
+            font-size: 1rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-30px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-info {
+                max-width: 90%;
+                margin-top: 20px;
+            }
+
+            .skills {
+                margin-top: 20px;
+            }
+
+            .education {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Image with Blur Effect -->
+    <div class="background"></div>
+
+    <header>
+        Portfolio - Kunchai Noichalee
+    </header>
+
+    <div class="container">
+        <!-- Profile Section -->
+        <section class="profile">
+            <img src="images/profile.jpg" alt="Kunchai Noichalee">
+            <div class="profile-info">
+                <h2>สวัสดีครับ! ผมชื่อ กุญชัย น้อยชาลี</h2>
+                <p>ตำแหน่ง: โปรแกรมเมอร์</p>
+                <p>ประสบการณ์งาน: 10 ปี</p>
+                <p>การศึกษา: ปริญญาตรี สาขาวิศวกรรมคอมพิวเตอร์</p>
+                <p>มหาวิทยาลัย: มหาวิทยาลัยนครพนม</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <div class="section-title">ทักษะของผม</div>
+            <ul>
+                <li>ภาษาโปรแกรม: Python, JavaScript, Java, C++</li>
+                <li>Web Development: HTML, CSS, React, Node.js</li>
+                <li>ฐานข้อมูล: MySQL, PostgreSQL, MongoDB</li>
+                <li>Frameworks: React, Express, Django</li>
+                <li>เครื่องมือ: Git, Docker, CI/CD</li>
+            </ul>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education">
+            <div class="section-title">การศึกษา</div>
+            <p>ปริญญาตรี สาขาวิศวกรรมคอมพิวเตอร์, มหาวิทยาลัยนครพนม</p>
+            <p>สำเร็จการศึกษาปี: 2554</p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Kunchai Noichalee | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
